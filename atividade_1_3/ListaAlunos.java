@@ -38,7 +38,7 @@ public class ListaAlunos {
 		Aluno r = null;
 		if (inicio==null) {
 			
-			System.out.println("Lista Vázia");
+			System.out.println("Lista Vazia");
 		}
 		else {
 			
@@ -83,7 +83,7 @@ public class ListaAlunos {
 	                Novo.prox=aux.prox;
 	                aux.prox=Novo;
 	            }else{
-	                System.out.println("Posição Inválida!");
+	                System.out.println("Posicao Invalida!");
 	            }            
 	        }
 	    }
@@ -132,7 +132,7 @@ public class ListaAlunos {
 	public Aluno RemoveInicio() {
 		Aluno r = null;
 		if (inicio==null){
-			JOptionPane.showMessageDialog(null,"Lista Vázia");
+			JOptionPane.showMessageDialog(null,"Lista Vazia");
 		}
 		else{
 			r=inicio.aluno;

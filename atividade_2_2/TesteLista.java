@@ -3,6 +3,7 @@ package atividade_2_2;
 import javax.swing.*;
 public class TesteLista {
 	public static void main(String[]args){
+		String aux = "";
 		Lista temperaturas=new Lista();                   
 		int op=0,temperatura,pos;
 		while(op!=99){
@@ -36,7 +37,8 @@ public class TesteLista {
 				JOptionPane.showMessageDialog(null,"O elemento removido foi:"+temperaturas.RemoveQualquerPosicao(pos));
 				break;
 			case 7:
-				JOptionPane.showMessageDialog(null,"Lista:"+temperaturas.percorre());       
+				//JOptionPane.showMessageDialog(null,"Lista:"+temperaturas.percorre(aux, 0));  
+				temperaturas.percorre(aux, 0);
 				break;
 			case 99:
 				JOptionPane.showMessageDialog(null,"Saindo");

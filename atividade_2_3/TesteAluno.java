@@ -24,7 +24,7 @@ public class TesteAluno {
 					turma = JOptionPane.showInputDialog("Digite a turma do aluno:");
 					semestre = JOptionPane.showInputDialog("Digite o semestre do aluno:");
 					aluno = new Aluno(ra, nome, turma, semestre);
-					lista.AdicionaFinal(aluno);
+					lista.adicionaFinal(aluno);
 			break;
 			
 			case 2: ra = Integer.parseInt(JOptionPane.showInputDialog("Digite o RA do aluno:"));
@@ -32,7 +32,7 @@ public class TesteAluno {
 					turma = JOptionPane.showInputDialog("Digite a turma do aluno:");
 					semestre = JOptionPane.showInputDialog("Digite o semestre do aluno:");
 					aluno = new Aluno(ra, nome, turma, semestre);
-					lista.AdicionaInicio(aluno);
+					lista.adicionaInicio(aluno);
 			break;
 			
 			case 3: ra = Integer.parseInt(JOptionPane.showInputDialog("Digite o RA do aluno:"));
@@ -44,11 +44,11 @@ public class TesteAluno {
 					lista.escolhePosicao(aluno, pos);
 			break;
 			
-			case 4: aluno = lista.RemoveFinal();
+			case 4: aluno = lista.removeFinal();
 					JOptionPane.showMessageDialog(null, "Aluno: " +aluno.getNome()+ " removido do final");
 			break;
 			
-			case 5: aluno = lista.RemoveInicio();
+			case 5: aluno = lista.removeInicio();
 			JOptionPane.showMessageDialog(null, "Aluno: " +aluno.getNome()+ " removido do inicio");
 			break;
 			

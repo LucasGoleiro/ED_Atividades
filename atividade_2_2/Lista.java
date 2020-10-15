@@ -1,5 +1,7 @@
 package atividade_2_2;
 
+import javax.swing.JOptionPane;
+
 public class Lista {                  
 	private int dados[];                  
 	private int tamanho;                 
@@ -100,13 +102,20 @@ public class Lista {
 
 
 
-	public String percorre(){                    
-		String aux=" ";
+	public void percorre(String aux, int i){                    
 
-		for (int i=0;i<tamanho;i++){
-			aux=aux+"\n"+dados[i] + " °C";
+		if (i == dados.length) {
+			JOptionPane.showMessageDialog(null,"Lista:"+ aux);
+		} else {
+			if (dados[i] != 0) {
+				aux=aux+"\n"+dados[i] + " °C";
+				percorre(aux, i + 1);
+			} else {
+				percorre(aux, i + 1);
+			}
+	
 		}
-		return aux;
+		
 	}
 }
 

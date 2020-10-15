@@ -10,7 +10,7 @@ public class ListaAlunos {
 		inicio=null;
 	}
 
-	public void AdicionaFinal(Aluno aluno) {
+	public void adicionaFinal(Aluno aluno) {
 		if (inicio==null) {
 			
 			No n = new No(aluno);
@@ -27,14 +27,15 @@ public class ListaAlunos {
 			aux.prox=n;
 		}
 	}
+	
 
-	public void AdicionaInicio(Aluno aluno) {
+	public void adicionaInicio(Aluno aluno) {
 		No n = new No(aluno);
 		n.prox = inicio;
 		inicio = n;
 	}
 
-	public Aluno RemoveFinal(){
+	public Aluno removeFinal(){
 		Aluno r = null;
 		if (inicio==null) {
 			
@@ -65,11 +66,11 @@ public class ListaAlunos {
 		return r;
 	}
 	
-	   public void escolhePosicao(Aluno aluno, int pos){
+	public void escolhePosicao(Aluno aluno, int pos){
 	        No Novo= new No(aluno);
 
 	        if(pos == 1) {           
-	            AdicionaInicio(aluno);
+	            adicionaInicio(aluno);
 	        }else{       
 	            No aux=inicio;
 	            int count=1;
@@ -89,7 +90,7 @@ public class ListaAlunos {
 	    }
 	   
 	   
-	    public Aluno escolheRemove(int pos) {
+	public Aluno escolheRemove(int pos) {
 	        Aluno e = null;
 	        int i=1;
 	        No aux=inicio;
@@ -99,7 +100,7 @@ public class ListaAlunos {
 	            return e;
 	        }    
 	        if(pos==1){
-	            e = RemoveInicio();
+	            e = removeInicio();
 	            return e;
 	        }else{           
 	            while(aux.prox!=null){
@@ -110,7 +111,7 @@ public class ListaAlunos {
 	                System.out.println("Posição Invalida!");
 	                return e;
 	            }else if(pos==i){
-	                e=RemoveFinal();
+	                e=removeFinal();
 	                return e;
 	            }else{
 	                aux=inicio;
@@ -129,7 +130,7 @@ public class ListaAlunos {
 	    }
 	 
 
-	public Aluno RemoveInicio() {
+	public Aluno removeInicio() {
 		Aluno r = null;
 		if (inicio==null){
 			JOptionPane.showMessageDialog(null,"Lista Vazia");
@@ -149,6 +150,14 @@ public class ListaAlunos {
 			aux=aux.prox;
 		}
 		return r;
+	}
+	
+	public boolean estaVazio() {
+		if (this.inicio == null) {
+			return false;
+		} else {
+			return true;
+		}
 	}
 
 }
